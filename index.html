@@ -220,92 +220,13 @@
                             <span class="price-label">Starting at</span>
                             <span class="price-value" id="game-price">$1.00/mo</span>
                         </div>
-                        <a href="#" class="btn-order">Order Now <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="products/minecraft.html" class="btn-order">Order Now <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
         </div>
 
     </section>
-
-    <script>
-        const gameData = {
-            terraria: {
-                title: "Terraria",
-                description: "Build, fight, dig, and explore in the world of Terraria. Our servers provide the perfect environment for your journey with zero lag and high reliability.",
-                price: "$2/GB",
-                image: "url('assets/images/games/Terraria.png')",
-                accent: "#ff6600"
-            },
-            minecraft: {
-                title: "Minecraft",
-                description: "Experience the ultimate sandbox adventure with our high-performance Minecraft servers. Support for all versions, mods, and plugins with one-click installation.",
-                price: "$1/GB",
-                image: "url('assets/images/games/minecraft.jpg')",
-                accent: "#00ff1e"
-            },
-            palworld: {
-                title: "Palworld",
-                description: "Catch, build, and survive in the mysterious world of Palworld. Our powerful hardware ensures a smooth multiplayer experience for you and your friends.",
-                price: "$2/GB",
-                image: "url('assets/images/games/palworld.jpg')",
-                accent: "#18c8ff" 
-            },
-            velheim: {
-                title: "Valheim",
-                description: "A battle-slain warrior, the Valkyries have borne your soul to Valheim, the tenth Norse world. Conquer the wilderness and build your legacy on our stable servers.",
-                price: "$2/GB",
-                image: "url('assets/images/games/valheim.jpg')",
-                accent: "#fcb516"
-            },
-            gta: {
-                title: "GTA V (FiveM)",
-                description: "Join the most vibrant roleplay communities or create your own with our FiveM ready servers. Optimized for performance and stability.",
-                price: "$2/GB",
-                image: "url('assets/images/games/gta.jpg')",
-                accent: "#8e44ad"
-            },
-            ark: {
-                title: "ARK Survival",
-                description: "Stranded on the shores of a mysterious island, you must learn to survive. Tame dinosaurs and conquer the Ark on our high-RAM performance servers.",
-                price: "$2/GB",
-                image: "url('assets/images/games/ark.jpg')",
-                accent: "#00ff1e"
-            },
-            rust: {
-                title: "Rust",
-                description: "The only goal in Rust is to survive. Overcome struggles such as hunger, thirst and cold. Our DDoS protected servers keep you in the fight 24/7.",
-                price: "$2/GB",
-                image: "url('assets/images/games/rust.webp')",
-                accent: "#e62f22"
-            }
-        };
-
-        function showGame(gameId, element) {
-            const data = gameData[gameId];
-            if (!data) return;
-
-            // Update active state in sidebar
-            document.querySelectorAll('.game-item').forEach(item => item.classList.remove('active'));
-            element.classList.add('active');
-
-            // Update details card with animation
-            const details = document.getElementById('game-details');
-            details.style.setProperty('--game-accent', data.accent);
-            details.style.opacity = '0';
-            details.style.transform = 'translateY(10px)';
-
-            setTimeout(() => {
-                document.getElementById('game-title').innerText = data.title;
-                document.getElementById('game-description').innerText = data.description;
-                document.getElementById('game-price').innerText = data.price;
-                document.getElementById('game-card-bg').style.backgroundImage = data.image;
-
-                details.style.opacity = '1';
-                details.style.transform = 'translateY(0)';
-            }, 200);
-        }
-    </script>
 
     <!-- Footer -->
     <footer class="footer">
